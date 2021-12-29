@@ -25,32 +25,13 @@ namespace PostGradOffice
                 ViewCourse.CommandType = CommandType.StoredProcedure;
                 ViewCourse.Parameters.Add(new SqlParameter("@studentId", SqlDbType.VarChar)).Value = Session["user"];
                 conn.Open();
-                SqlDataReader rdr = ViewCourse.ExecuteReader(CommandBehavior.CloseConnection);
-
-                while (rdr.Read())
-                {
-                    int id = rdr.GetInt32(0);
-                    ListItem li = new ListItem();
-                    li.Text = id + "";
-                    ListBox1.Items.Add(li);
-
-                    String code = "Not defined yet";
-                    if (!rdr.IsDBNull(1))
-                    {
-                        code = rdr.GetString(1);
-                    }
-                    ListItem li1 = new ListItem();
-                    li1.Text = code;
-                    ListBox2.Items.Add(li1);
-                    decimal grade = 0;
-                    if (!rdr.IsDBNull(2))
-                    {
-                        grade = rdr.GetDecimal(2);
-                    }
-                    ListItem li2 = new ListItem();
-                    li2.Text = grade + "";
-                    ListBox3.Items.Add(li2);
-                }
+                ViewCourse.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(ViewCourse);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                conn.Close();
 
             }
         }

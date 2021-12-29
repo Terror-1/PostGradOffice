@@ -47,6 +47,7 @@ namespace PostGradOffice
                 Linkproc.CommandType = CommandType.StoredProcedure;
                 Linkproc.Parameters.Add(new SqlParameter("@PubID", SqlDbType.Int)).Value = Int16.Parse(ID);
                 Linkproc.Parameters.Add(new SqlParameter("@thesisSerialNo", SqlDbType.Int)).Value = Int16.Parse(sernum);
+                Linkproc.Parameters.Add(new SqlParameter("@studentId", SqlDbType.VarChar)).Value = Session["user"];
 
                 SqlParameter sucess = Linkproc.Parameters.Add("@Success", SqlDbType.Int);
                 sucess.Direction = System.Data.ParameterDirection.Output;
@@ -61,7 +62,7 @@ namespace PostGradOffice
                 }
                 else if (sucess.Value.Equals(0))
                 {
-                    Response.Write("<script language=javascript>alert('Link failed please enter a correct serialnumber or a correct publication Id');</script>");
+                    Response.Write("<script language=javascript>alert('Link failed please enter a valid serialnumber or a valid publication Id');</script>");
                 }
                 else if (sucess.Value.Equals(2))
                 {
