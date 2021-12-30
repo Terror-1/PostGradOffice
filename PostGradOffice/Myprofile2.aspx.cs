@@ -29,8 +29,8 @@ namespace PostGradOffice
                 while (rdr.Read())
 
                 {
-                    String type = "not defined yet";
-                    Decimal GPA = 0;
+                    String type = "--";
+                    String GPA = "--";
 
                     int id3 = rdr.GetInt32(rdr.GetOrdinal("id"));
                     String email = rdr.GetString(rdr.GetOrdinal("email"));
@@ -44,7 +44,7 @@ namespace PostGradOffice
                     }
                     if (!rdr.IsDBNull(6))
                     {
-                        GPA = rdr.GetDecimal(6);
+                        GPA = rdr.GetDecimal(6)+"";
                     }
                     String Faculty = rdr.GetString(rdr.GetOrdinal("faculty"));
                     String adress = rdr.GetString(rdr.GetOrdinal("address"));
@@ -54,7 +54,7 @@ namespace PostGradOffice
                     mail.Text = email;
                     Tp.Text = type;
                     facc.Text = Faculty;
-                    Gpa.Text = GPA + "";
+                    Gpa.Text = GPA ;
 
 
 

@@ -40,7 +40,7 @@ namespace PostGradOffice
         {
             String prgrssnum = TextBox2.Text;
             String date = TextBox1.Text;
-            int serialnum = Int16.Parse(DropDownList1.SelectedItem.Value);
+            String serialnum1 = DropDownList1.SelectedItem.Value;
           
             if (prgrssnum == "")
             {
@@ -54,7 +54,8 @@ namespace PostGradOffice
             {
                 Response.Write("<script language=javascript>alert('please choose date');</script>");
             }
-            else {
+            else if (prgrssnum != "" && DropDownList1.SelectedValue != "" && date == "") {
+                int serialnum = Int16.Parse(serialnum1);
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();
                 SqlConnection conn = new SqlConnection(connStr);
                 SqlCommand Addprogress = new SqlCommand("AddProgressReport", conn);

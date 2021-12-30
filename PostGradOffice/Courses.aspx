@@ -5,10 +5,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+        <style>
+            body {
+  background-color: linen;
+}
+        h1 {
+    width:400px;
+    margin: 0 auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: gray;
+    text-align: center;
+}
+      
+         .mybtn { 
+         width=30%;
+         border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight:bold;
+        }
+         
+    </style>
 </head>
 <body>
+    <h1>My Courses</h1>
     <form id="form1" runat="server">
-          <asp:Label ID="Label2" runat="server" Text="My Courses"></asp:Label><br />
+         <br />
+        <br />
+
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775"></AlternatingRowStyle>
             <Columns>
@@ -39,8 +69,10 @@
 
             <SortedDescendingHeaderStyle BackColor="#6F8DAE"></SortedDescendingHeaderStyle>
         </asp:GridView>
+        <br />
+        <br />
 
-        <asp:Button ID="Button1" runat="server" Text="ok" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" CssClass="mybtn" runat="server" Text="ReturnToHome" OnClick="Button1_Click" />
 
         <p>
     </form>

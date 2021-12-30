@@ -67,10 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddComment.aspx" />
+    <Content Include="AddGrade.aspx" />
     <Content Include="Addmobile.aspx" />
     <Content Include="Addprogressreport.aspx" />
     <Content Include="Addpublication.aspx" />
     <Content Include="Courses.aspx" />
+    <Content Include="EditInfo.aspx" />
+    <Content Include="Examiner page.aspx" />
     <Content Include="ExaminerRegister.aspx" />
     <Content Include="Fillprogress.aspx" />
     <Content Include="Linkpublication.aspx" />
@@ -79,6 +83,8 @@
     <Content Include="Myprofile2.aspx" />
     <Content Include="NonGucian.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="SearchForThesis.aspx" />
+    <Content Include="SeeDetails.aspx" />
     <Content Include="student.aspx" />
     <Content Include="StudentRegister.aspx" />
     <Content Include="SupervisorRegister.aspx" />
@@ -86,6 +92,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddComment.aspx.cs">
+      <DependentUpon>AddComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddComment.aspx.designer.cs">
+      <DependentUpon>AddComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddGrade.aspx.cs">
+      <DependentUpon>AddGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddGrade.aspx.designer.cs">
+      <DependentUpon>AddGrade.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Addmobile.aspx.cs">
       <DependentUpon>Addmobile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +133,20 @@
     </Compile>
     <Compile Include="Courses.aspx.designer.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditInfo.aspx.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditInfo.aspx.designer.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examiner page.aspx.cs">
+      <DependentUpon>Examiner page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examiner page.aspx.designer.cs">
+      <DependentUpon>Examiner page.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExaminerRegister.aspx.cs">
       <DependentUpon>ExaminerRegister.aspx</DependentUpon>
@@ -170,6 +204,20 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForThesis.aspx.cs">
+      <DependentUpon>SearchForThesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchForThesis.aspx.designer.cs">
+      <DependentUpon>SearchForThesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeeDetails.aspx.cs">
+      <DependentUpon>SeeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeeDetails.aspx.designer.cs">
+      <DependentUpon>SeeDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="student.aspx.cs">
       <DependentUpon>student.aspx</DependentUpon>

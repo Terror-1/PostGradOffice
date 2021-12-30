@@ -1,42 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Thesis.aspx.cs" Inherits="PostGradOffice.Thesis" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SearchForThesis.aspx.cs" Inherits="DataBase_Project.SearchForThesis" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style>
-        body {
-  background-color: linen;
-}
-        h1 {
-    width:400px;
-    margin: 0 auto;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: gray;
-    text-align: center;
-}
-          .mybtn { 
-         width=30%;
-         border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight:bold;
-        }
-    </style>
 </head>
 <body>
-    <h1>My Thesis</h1>
     <form id="form1" runat="server">
-     <br />
-        <br />
-      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <div>
+        <p>
+        <asp:Label ID="Label12" runat="server" Text="Search for a thesis"></asp:Label>
+        &nbsp;</p>
+        <p>
+            <asp:TextBox ID="title" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+        <asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" />
+        </p>
+        </div>
+            <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775"></AlternatingRowStyle>
             <Columns>
                 <asp:BoundField ItemStyle-Width="150px" DataField="serialNumber" HeaderText="Thesis Serial Number" />
@@ -71,9 +53,6 @@
 
             <SortedDescendingHeaderStyle BackColor="#6F8DAE"></SortedDescendingHeaderStyle>
         </asp:GridView>
-        <p>
-            <asp:Button ID="Button1" CssClass="mybtn" runat="server" Text="ReturnToHome" OnClick="Button1_Click" />
-        </p>
     </form>
 </body>
 </html>
