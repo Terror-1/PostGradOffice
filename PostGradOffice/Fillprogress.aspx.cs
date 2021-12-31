@@ -14,7 +14,14 @@ namespace PostGradOffice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null | Session["type"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!Session["type"].ToString().Equals("0") & !Session["type"].ToString().Equals("4"))
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void fill_Click(object sender, EventArgs e)
@@ -23,10 +30,21 @@ namespace PostGradOffice
             String prgrss = prgrssnumm.Text;
             String sta = state.Text;
             String description = desc.Text;
-            if (sernum=="" || prgrss == "" ||sta =="" || description == "")
+            int x;
+            int y;
+            int z;
+            bool parsable = int.TryParse(serial.Text, out x);
+            bool parsable2 = int.TryParse(prgrssnumm.Text, out y);
+            bool parsable3 = int.TryParse(state.Text, out z);
+
+            if (sernum == "" || prgrss == "" || sta == "" || description == "")
             {
                 Response.Write("<script language=javascript>alert('please fill all the blanks');</script>");
             }
+            else if (!parsable || !parsable2 || !parsable3)
+            {
+                Response.Write("<script language=javascript>alert('please enter a valid serialNumber and progressReport number and state');</script>");
+            } 
             else
             {
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();
@@ -50,13 +68,13 @@ namespace PostGradOffice
                 if (sucess.Value.ToString() == "True")
                 {
                     Response.Write(("<script language=javascript>alert('Filled Successfully ');</script>"));
-                        
+
                 }
-                else if (sucess.Value.ToString() == "false")
+                else if (sucess.Value.ToString() == "False")
                 {
                     Response.Write(("<script language=javascript>alert('please enter a correct info ');</script>"));
                 }
-                
+
             }
 
         }

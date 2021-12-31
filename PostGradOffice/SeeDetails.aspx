@@ -5,11 +5,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <style>
+         .mybtn { 
+         width=30%;
+         border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight:bold;
+        }
+     body {
+  background-color: #98B4D4;
+}
+   
+      
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" />
+            <asp:Button ID="Back" CssClass="mybtn" runat="server" Text="Back" OnClick="Back_Click" />
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>

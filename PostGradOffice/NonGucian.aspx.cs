@@ -11,7 +11,14 @@ namespace PostGradOffice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null | Session["type"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!Session["type"].ToString().Equals("4"))
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void profile_Click(object sender, EventArgs e)

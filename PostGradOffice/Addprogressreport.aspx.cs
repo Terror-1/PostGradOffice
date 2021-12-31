@@ -14,7 +14,15 @@ namespace PostGradOffice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["user"] == null | Session["type"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!Session["type"].ToString().Equals("0") & !Session["type"].ToString().Equals("4"))
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!IsPostBack)
             {
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();
 
@@ -41,20 +49,22 @@ namespace PostGradOffice
             String prgrssnum = TextBox2.Text;
             String date = TextBox1.Text;
             String serialnum1 = DropDownList1.SelectedItem.Value;
-          
-            if (prgrssnum == "")
+            int x;
+            bool parsable = int.TryParse(TextBox2.Text, out x);
+
+            if (prgrssnum == "" ||!parsable)
             {
-                Response.Write("<script language=javascript>alert('please enter a progress report num');</script>");
+                Response.Write("<script language=javascript>alert('please enter a valid progress report num');</script>");
             }
-            if (DropDownList1.SelectedValue =="")
+            else if (DropDownList1.SelectedValue =="")
             {
                 Response.Write("<script language=javascript>alert('select a thesis');</script>");
             }
-            if (date == "")
+            else if (date == "")
             {
                 Response.Write("<script language=javascript>alert('please choose date');</script>");
             }
-            else if (prgrssnum != "" && DropDownList1.SelectedValue != "" && date == "") {
+            else  {
                 int serialnum = Int16.Parse(serialnum1);
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();
                 SqlConnection conn = new SqlConnection(connStr);

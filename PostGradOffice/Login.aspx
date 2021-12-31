@@ -38,6 +38,12 @@
             font-size : large;
             font-weight:bold
         }
+        .label1{
+            float:right;
+            color:black;
+            font-size : large;
+            font-weight:bold
+        }
         body{
               background-color: #f2f2f2;
         }
@@ -64,5 +70,8 @@
         </p>
     </form>
         </div>
+    <p>
+        <asp:Label ID="Label4" CssClass="label1" runat="server" Text="&copy; At[R]ic GUC team"></asp:Label>
+    </p>
 </body>
 </html>

@@ -14,7 +14,14 @@ namespace PostGradOffice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null | Session["type"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!Session["type"].ToString().Equals("0") & !Session["type"].ToString().Equals("4"))
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void Return_Click(object sender, EventArgs e)
@@ -34,11 +41,20 @@ namespace PostGradOffice
         {
             String ID = pub.Text;
             String sernum = serial.Text;
+            int x;
+            int y;
+            bool parsable = int.TryParse(pub.Text, out x);
+            bool parsable2 = int.TryParse(pub.Text, out y);
 
             if (ID == "" || sernum == "")
             {
                 Response.Write("<script language=javascript>alert('please fill all the blanks');</script>");
             }
+            else if (!parsable || !parsable2)
+            {
+                Response.Write("<script language=javascript>alert('please enter a valid pub Id and valid Serial num ');</script>");
+            }
+       
             else
             {
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();

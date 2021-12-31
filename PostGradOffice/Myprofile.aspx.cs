@@ -14,7 +14,15 @@ namespace PostGradOffice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["user"] == null | Session["type"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!Session["type"].ToString().Equals("0"))
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (!IsPostBack)
             {
                 String connStr = WebConfigurationManager.ConnectionStrings["PostGradOffice"].ToString();
 

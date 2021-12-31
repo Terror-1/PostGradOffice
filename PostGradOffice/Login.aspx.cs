@@ -70,7 +70,7 @@ namespace PostGradOffice
                     }
                     else if (type.Value.ToString() == "3")
                     {
-                        Response.Write("Examiner");
+                        Response.Redirect("Examiner Page.aspx");
                     }
                     else if (type.Value.ToString() == "4")
                     {
