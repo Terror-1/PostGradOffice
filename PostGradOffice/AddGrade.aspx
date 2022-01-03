@@ -44,7 +44,7 @@
     <form id="form1" runat="server">
         <div>
         <p>
-        <asp:Label ID="Label8" CssClass="label" runat="server" Text="Add comments for a defense"></asp:Label>
+        <asp:Label ID="Label8" CssClass="label" runat="server" Text="Add grade for a defense"></asp:Label>
         &nbsp;&nbsp;</p>
         <p>
         <asp:Label ID="Label9" CssClass="label" runat="server" Text="ThesisSerialNo"></asp:Label>

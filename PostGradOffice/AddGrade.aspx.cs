@@ -44,7 +44,7 @@ namespace DataBase_Project
                 int id5 = Int16.Parse(Session["user"].ToString());
                 DateTime defenseDate5 = DateTime.ParseExact(defenseDate.Text,"yyyy-MM-dd", CultureInfo.InvariantCulture);
                 int serialno5 = Int16.Parse(serialno.Text);
-                decimal grade5 = decimal.Parse(grade.Text, new NumberFormatInfo() { NumberDecimalSeparator = "." });
+                decimal grade5 = decimal.Parse(grade.Text);
                 SqlCommand AddGra = new SqlCommand("AddDefenseGrade", conn);
                 AddGra.CommandType = CommandType.StoredProcedure;
                 AddGra.Parameters.Add(new SqlParameter("@id", id5));

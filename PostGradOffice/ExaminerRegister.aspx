@@ -43,22 +43,22 @@
         <div>
             <asp:Label ID="Label1" CssClass="label" runat="server" Text="First Name"></asp:Label>
             <br />
-            <asp:TextBox ID="FirstName" CssClass="textbox" runat="server" ></asp:TextBox>
+            <asp:TextBox ID="FirstName" MaxLength="20" CssClass="textbox" runat="server" ></asp:TextBox>
             <br />
-            <asp:Label ID="Label2" CssClass="label" runat="server" Text="Last Name"></asp:Label>
+            <asp:Label ID="Label2"  CssClass="label" runat="server" Text="Last Name"></asp:Label>
             <br />
-            <asp:TextBox ID="LastName" CssClass="textbox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="LastName" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label6" CssClass="label" runat="server" Text="email"></asp:Label> <br />
-             <asp:TextBox ID="email" CssClass="textbox" runat="server"></asp:TextBox>
+             <asp:TextBox ID="email" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label3" CssClass="label" runat="server" Text="password"></asp:Label>
             <br />
-            <asp:TextBox ID="password" CssClass="textbox" TextMode="Password" runat="server"></asp:TextBox>
+            <asp:TextBox ID="password" MaxLength="20" CssClass="textbox" TextMode="Password" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label4" CssClass="label" runat="server" Text="FieldOfWork"></asp:Label>
             <br />
-            <asp:TextBox ID="FeildOfWork" CssClass="textbox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="FeildOfWork" MaxLength="100" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label5" CssClass="label" runat="server" Text="isNational"></asp:Label> <br />
             <asp:CheckBox ID="isNational" runat="server" />

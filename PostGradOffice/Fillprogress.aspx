@@ -67,7 +67,7 @@
          
         <asp:Label ID="Label5" CssClass="label" runat="server" Text="enter the description :"></asp:Label>
         <p>
-            <asp:TextBox ID="desc" CssClass="textbox" runat="server"  Width="179px"></asp:TextBox>
+            <asp:TextBox ID="desc" MaxLength="200" CssClass="textbox" runat="server"  Width="179px"></asp:TextBox>
         </p>
         <asp:Button ID="fill" CssClass="mybtn" runat="server" Text="fill" Height="51px" OnClick="fill_Click" Width="179px" />
         <p>

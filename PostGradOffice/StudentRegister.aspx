@@ -43,26 +43,26 @@
         <div>
             <asp:Label ID="Label1" CssClass="label" runat="server" Text="First Name"></asp:Label>
             <br />
-            <asp:TextBox ID="FirstName" CssClass="textbox" runat="server" ></asp:TextBox>
+            <asp:TextBox ID="FirstName" MaxLength="20"  CssClass="textbox" runat="server" ></asp:TextBox>
             <br />
             <asp:Label ID="Label2" CssClass="label" runat="server" Text="Last Name"></asp:Label>
             <br />
-            <asp:TextBox ID="LastName" CssClass="textbox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="LastName" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label3" CssClass="label" runat="server" Text="password"></asp:Label>
             <br />
-            <asp:TextBox ID="password" CssClass="textbox" TextMode="Password" runat="server"></asp:TextBox>
+            <asp:TextBox ID="password" MaxLength="20" CssClass="textbox" TextMode="Password" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label4" CssClass="label" runat="server" Text="Faculty"></asp:Label>
             <br />
-            <asp:TextBox ID="Faculty" CssClass="textbox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Faculty" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label5" CssClass="label" runat="server" Text="email"></asp:Label> <br />
 
-             <asp:TextBox ID="email" CssClass="textbox" runat="server"></asp:TextBox>
+             <asp:TextBox ID="email" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label6" CssClass="label" runat="server" Text="address"></asp:Label> <br />
-             <asp:TextBox ID="address" CssClass="textbox" runat="server"></asp:TextBox>
+             <asp:TextBox ID="address" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
         </div>
         <p>
             <asp:Label ID="Label7" runat="server"  CssClass="label" Text="Gucian"></asp:Label> <br />

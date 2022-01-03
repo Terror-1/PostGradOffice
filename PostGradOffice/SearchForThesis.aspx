@@ -47,7 +47,7 @@
         <asp:Label ID="Label12" CssClass="label" runat="server" Text="Search for a thesis"></asp:Label>
         &nbsp;</p>
         <p>
-            <asp:TextBox ID="title" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+            <asp:TextBox ID="title" MaxLength="100" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
         </p>
         </div>
         <asp:Button ID="Search" CssClass="mybtn" runat="server" Text="Search" OnClick="Search_Click" />

@@ -62,11 +62,11 @@ namespace PostGradOffice
                     }
                     else if (type.Value.ToString() == "1")
                     {
-                        Response.Write("Admin");
+                        Response.Redirect("AdminHome.aspx");
                     }
                     else if (type.Value.ToString() == "2")
                     {
-                        Response.Write("Supervisor");
+                        Response.Redirect("Supervisor.aspx");
                     }
                     else if (type.Value.ToString() == "3")
                     {

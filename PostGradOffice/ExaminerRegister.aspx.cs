@@ -50,14 +50,30 @@ namespace PostGradOffice
                 ExaminerRegisterProc.Parameters.Add(new SqlParameter("@email", SqlDbType.VarChar)).Value = mail;
                 ExaminerRegisterProc.Parameters.Add(new SqlParameter("@isNational", SqlDbType.VarChar)).Value = isNat;
 
+                SqlParameter sucess = ExaminerRegisterProc.Parameters.Add("@success", SqlDbType.Bit);
+                sucess.Direction = System.Data.ParameterDirection.Output;
+
+
                 conn.Open();
                 ExaminerRegisterProc.ExecuteNonQuery();
                 conn.Close();
+                if (sucess.Value.ToString() == "True")
+                {
+                    Response.Redirect("Login.aspx");
+                }
 
 
-                Response.Redirect("Login.aspx");
+                else if (sucess.Value.ToString() == "False")
+
+                {
+                    Response.Write("<script language=javascript>alert('email already used');</script>");
+                }
+
+
+
+
             }
+        }
 
         }
     }
-}

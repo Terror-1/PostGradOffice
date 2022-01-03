@@ -62,7 +62,7 @@
         <asp:Label ID="Label7" CssClass="label" runat="server" Text="comments"></asp:Label>
         &nbsp;</p>
         <p>
-            <asp:TextBox ID="comments" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+            <asp:TextBox ID="comments" MaxLength="300" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
         </p>
         </div> 
         <asp:Button ID="AddComm" CssClass="mybtn" runat="server" Text="AddComm" OnClick="AddComm_Click" />

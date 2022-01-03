@@ -55,7 +55,7 @@
             <asp:Label ID="Label2" runat="server"  Text="Mobile number :"></asp:Label>
         </p>
         
-        <asp:TextBox ID="mobile" CssClass="textbox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="mobile" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
         <br />
         <br />
         

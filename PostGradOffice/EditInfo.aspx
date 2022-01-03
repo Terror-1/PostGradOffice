@@ -48,7 +48,7 @@
         <asp:Label ID="Label2" CssClass="label" runat="server" Text="Name"></asp:Label>
         &nbsp;&nbsp;</p>
         <p>
-        &nbsp;<asp:TextBox ID="Name" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="Name" MaxLength="20" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
         </p>
             <p>
         <asp:Button ID="ChangeName" CssClass="mybtn" runat="server" Text="ChangeName" OnClick="ChangeName_Click" />
@@ -58,7 +58,7 @@
         </p>
         <p>
             &nbsp;
-            <asp:TextBox ID="fieldOfwork" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+            <asp:TextBox ID="fieldOfwork" MaxLength="100" CssClass="textbox" runat="server" style="margin-bottom: 0px"></asp:TextBox>
         </p>
         </div>
         <asp:Button ID="ChangeFieldOfwork" CssClass="mybtn" runat="server" Text="Change Field Of Work" OnClick="ChangeFieldOfwork_Click" />

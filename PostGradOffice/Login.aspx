@@ -57,11 +57,11 @@
         <p>
             <asp:Label ID="Label2" CssClass="label" runat="server" Text="email"></asp:Label>
         </p>
-        <asp:TextBox ID="id" CssClass="email"  runat="server"></asp:TextBox>
+        <asp:TextBox ID="id" MaxLength="50" CssClass="email"  runat="server"></asp:TextBox>
         <p>
             <asp:Label ID="Label3" CssClass="label" runat="server" Text="password"></asp:Label>
         </p>
-        <asp:TextBox ID="Password" CssClass="email" TextMode="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Password" MaxLength="20" CssClass="email" TextMode="Password" runat="server"></asp:TextBox>
         <p>
             <asp:Button ID="signin" CssClass="mybtn" runat="server" Text="Login" OnClick="signin_Click" />
         </p>

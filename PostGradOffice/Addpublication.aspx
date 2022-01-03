@@ -53,7 +53,7 @@
         <p>
             <asp:Label ID="Label2" CssClass="label" runat="server" Text="Title :"></asp:Label>
         </p>
-        <asp:TextBox ID="Title" CssClass="textbox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Title" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
          <p>
             <asp:Label ID="Label3" CssClass="label" runat="server" Text="publciation Date :"></asp:Label>
         </p>
@@ -61,11 +61,11 @@
          <p>
             <asp:Label ID="Label4" CssClass="label" runat="server" Text="Host :"></asp:Label>
         </p>
-        <asp:TextBox ID="host" CssClass="textbox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="host" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
          <p>
             <asp:Label ID="Label5" CssClass="label" runat="server" Text="Place :"></asp:Label>
         </p>
-        <asp:TextBox ID="place" CssClass="textbox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="place" MaxLength="50" CssClass="textbox" runat="server"></asp:TextBox>
          <p>
             <asp:Label ID="Label7" CssClass="label" runat="server" Text="Is accepted"></asp:Label> <br />
             <asp:CheckBox ID="accepted" runat="server"  />
